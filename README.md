@@ -1,7 +1,3 @@
-From Rhys L*******z
-To B****n W*****m L*******z
-
-
 Welcome to your new portfolio website!
 
 This guide will walk you through everything you need to know to take ownership of the site and, most importantly, how to add new photos to your gallery. The system is designed to be highly automated, so after a one-time setup, adding new content will be very easy.
@@ -99,3 +95,40 @@ If you ever want to add files directly, you can also do so on the GitHub website
 
 **Success:** As soon as you save (commit) these new files to the `main` branch, the same automated process will kick off, and your website will update itself within a few minutes.
 
+---
+
+## Part 3: Local Development (Optional)
+
+This part is only for if you want to edit the website's code or design on your own computer before it goes live.
+
+### Step 1: Install Node.js
+
+The tools used to build this website run on Node.js. You only need to install this once.
+
+1.  Go to the official Node.js website: https://nodejs.org/
+2.  Download the version labeled **LTS** (Long-Term Support).
+3.  Run the installer and accept all the default options. This will install Node.js and a command-line tool called `npm`.
+
+### Step 2: Install Project Dependencies
+
+Next, you need to download all the helper tools (like Tailwind CSS) that the project uses.
+
+1.  Open a terminal or command prompt (like PowerShell on Windows).
+2.  Navigate to the project folder on your computer.
+3.  Run the following command:
+    ```bash
+    npm install
+    ```
+
+**Success:** This command reads the `package.json` file and creates a `node_modules` folder containing all the necessary tools. You only need to do this once, or after any changes to the project's dependencies.
+
+### Step 3: Run the Local CSS Builder
+
+To see your CSS changes live as you edit the HTML, you need to run the Tailwind CSS builder.
+
+1.  In your terminal (still in the project folder), run this command:
+    ```bash
+    npm run tailwind:build
+    ```
+
+**Success:** The terminal will show some output, and then it will "watch" for changes. Leave this terminal window open while you are coding. Now, when you save changes to any HTML file, the `CSS/style.css` file will be automatically updated with the new styles.
